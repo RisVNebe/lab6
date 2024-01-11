@@ -1,0 +1,190 @@
+mixin sortik
+	details
+		summary Сортировка
+		p
+			select(name='books')
+				each item, key in book_sort_1
+					option(value=key)
+						|#{item}
+			select(name='percent')
+				each item, key in book_sort_2
+					option(value=key)
+						|#{item}
+			p
+			select(name='books')
+				each item, key in book_sort_1
+					option(value=key)
+						|#{item}
+			select(name='percent')
+				each item, key in book_sort_2
+					option(value=key)
+						|#{item}
+			p
+			select(name='books')
+				each item, key in book_sort_1
+					option(value=key)
+						|#{item}
+			
+			select(name='percent')
+				each item, key in book_sort_2
+					option(value=key)
+						|#{item}
+		input(type='button', value='Найти')
+		p
+
+
+mixin graphx
+
+	details
+		summary График
+		p
+			form
+				fieldset 
+					|OX :
+					br
+					each val, tag in list_autor
+								
+						input(type='radio', name='book', value=val)
+						|#{tag}
+						br
+					br
+							
+					
+					|Результат :
+					br
+					each val, tag in coord
+									
+						input(type="checkbox", name='xOy' value=val)
+						|#{tag}
+				
+						br
+					input(type='button', value='Построить')
+		p
+
+mixin tableaut 
+	table(border='2', align='center', cellspacing='0px')
+		tbody
+			tr
+			each item in table_col
+				th
+					|#{item}
+			tr 
+				each item in table_row
+					tr
+						td(align='center')
+							|#{item.ichi}
+						td(align='center')
+							|#{item.ni}
+						td(align='center')
+							|#{item.san}
+						td(align='center')
+							
+							img(src=item.img)
+
+block variabl 
+	- var table_col = ['Произведение', 'Автор', 'Год', 'Изображение']
+	- var list_autor = {'Автор' : 'Автор', 'Год' : ' Год'}
+	- var coord = {'Количество произведений' : 'xOy'}
+	- var book_sort_1 = {'0' : 'Нет', '1' : 'Автор', '2' : 'Произведение', '3' : 'Год'}
+	- var book_sort_2 = {'0' : 'По возрастанию', '1' : 'По убыванию'}
+	-
+		var table_row = [
+			{'ichi' : 'Мастер и Маргарита',
+			'ni' : 'Булгаков',
+			'san' : '1928',
+			'img' : 'img/book_1.jpg'
+			},
+			{'ichi' : 'Евгений Онегин',
+			'ni' : 'Александр Пушкин',
+			'san' : '1928',
+			'img' : 'img/book_2.jpg'
+			},
+			{'ichi' : 'Герой нашего времени',
+			'ni' : 'М.Ю.Лермонтов',
+			'san' : '1928',
+			'img' : 'img/book_3.jpg'
+			},
+			{'ichi' : 'Анна Каренина',
+			'ni' : 'Лев Толстой',
+			'san' : '1928',
+			'img' : 'img/book_4.jpg'
+			},
+			{'ichi' : 'Преступление и наказание',
+			'ni' : 'Ф.М.Достоевский',
+			'san' : '1928',
+			'img' : 'img/book_5.jpg'
+			},
+			{'ichi' : 'Отцы и дети',
+			'ni' : 'И.С.Тургенев',
+			'san' : '1928',
+			'img' : 'img/book_6.jpg'
+			},
+			{'ichi' : 'Братья Карамазовы',
+			'ni' : 'Ф. Достоевский',
+			'san' : '1928',
+			'img' : 'img/book_7.jpg'
+			},
+			{'ichi' : 'Горе от ума',
+			'ni' : 'А. Грибоедов',
+			'san' : '1928',
+			'img' : 'img/book_8.jpg'
+			},
+			{'ichi' : 'Тихий Дон',
+			'ni' : 'М. Шолохов',
+			'san' : '1928',
+			'img' : 'img/book_9.jpg'
+			},
+			{'ichi' : 'Доктор Живаго',
+			'ni' : 'Пастернак',
+			'san' : '1928',
+			'img' : 'img/book_10.jpg'
+			}
+		]
+
+
+
+include struct/header.pug
+
+form
+	
+	+graphx
+			
+
+
+
+		p
+	details
+		summary Фильтр
+		p.
+			
+			
+		form
+			label
+				| Автор
+
+				input#autor(type='text', name='autor')
+			br
+			br
+			label
+				| Год 
+				| от
+				input#year(type='number', name='year', min="1900", max="2099", value='2024')
+				| до 
+				input#year(type='number', name='year', min="1900", max="2099", value='2025')
+			br
+			br
+			label
+				| Произведение
+
+				input#book(type='text', name='book')
+			br
+			br
+		input(type='button', value='Найти')
+		p
+	+sortik 
+
+
+	+tableaut
+	
+			
+include struct/bottom.pug

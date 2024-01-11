@@ -1,0 +1,31 @@
+
+
+mixin menu(listmenu)
+	each item, key in listmenu
+		.container_menu_el
+			a(href= item + ".html" title=key)=key
+
+
+block variables
+	- var Listmenus = {'Главная' : 'index', 'Топ 10 классики' : 'table', 'О книге' : 'book'}
+
+doctype html 
+title 
+	|Книжни всякие
+header 
+	link(rel='stylesheet', href='css/main.css')
+	.elhead
+		input(type='search')
+		.button
+			button 
+				| 🔍
+		
+
+	.grtopic
+		.elmenu_1
+			.container_menu
+				+menu(Listmenus)
+
+
+		.elname
+			h1 Книжни всякие

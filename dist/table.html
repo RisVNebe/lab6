@@ -1,0 +1,181 @@
+<!DOCTYPE html >
+<title>
+   Книжни всякие</title>
+<header> 
+  <link rel="stylesheet" href="css/main.css"/>
+  <div class="elhead">
+    <input type="search"/>
+    <div class="button">
+      <button>
+         🔍</button>
+    </div>
+  </div>
+  <div class="grtopic">
+    <div class="elmenu_1">
+      <div class="container_menu">
+        <div class="container_menu_el"><a href="index.html" title="Главная">Главная</a></div>
+        <div class="container_menu_el"><a href="table.html" title="Топ 10 классики">Топ 10 классики</a></div>
+        <div class="container_menu_el"><a href="book.html" title="О книге">О книге</a></div>
+      </div>
+    </div>
+    <div class="elname">
+      <h1>Книжни всякие</h1>
+    </div>
+  </div>
+</header>
+<form>
+  <details>
+    <summary>График</summary>
+    <p>
+      <form>
+        <fieldset>
+           OX :<br/>
+          <input type="radio" name="book" value="Автор"/>Автор<br/>
+          <input type="radio" name="book" value=" Год"/>Год<br/><br/>Результат :<br/>
+          <input type="checkbox" name="xOy" value="xOy"/>Количество произведений<br/>
+          <input type="button" value="Построить"/>
+        </fieldset>
+      </form>
+    </p>
+    <p></p>
+  </details>
+  <details>
+    <summary>Фильтр</summary>
+    <p></p>
+    <form>
+      <label>Автор
+        <input id="autor" type="text" name="autor"/>
+      </label><br/><br/>
+      <label>
+        Год 
+        от
+        <input id="year" type="number" name="year" min="1900" max="2099" value="2024"/>до 
+        <input id="year" type="number" name="year" min="1900" max="2099" value="2025"/>
+      </label><br/><br/>
+      <label>Произведение
+        <input id="book" type="text" name="book"/>
+      </label><br/><br/>
+    </form>
+    <input type="button" value="Найти"/>
+    <p></p>
+  </details>
+  <details>
+    <summary>Сортировка</summary>
+    <p>
+      <select name="books">
+        <option value="0">Нет</option>
+        <option value="1">Автор</option>
+        <option value="2">Произведение</option>
+        <option value="3">Год</option>
+      </select>
+      <select name="percent">
+        <option value="0">По возрастанию</option>
+        <option value="1">По убыванию</option>
+      </select>
+      <p></p>
+      <select name="books">
+        <option value="0">Нет</option>
+        <option value="1">Автор</option>
+        <option value="2">Произведение</option>
+        <option value="3">Год</option>
+      </select>
+      <select name="percent">
+        <option value="0">По возрастанию</option>
+        <option value="1">По убыванию</option>
+      </select>
+      <p></p>
+      <select name="books">
+        <option value="0">Нет</option>
+        <option value="1">Автор</option>
+        <option value="2">Произведение</option>
+        <option value="3">Год</option>
+      </select>
+      <select name="percent">
+        <option value="0">По возрастанию</option>
+        <option value="1">По убыванию</option>
+      </select>
+    </p>
+    <input type="button" value="Найти"/>
+    <p></p>
+  </details>
+  <table border="2" align="center" cellspacing="0px">
+    <tbody>
+      <tr></tr>
+      <th>Произведение</th>
+      <th>Автор</th>
+      <th>Год</th>
+      <th>Изображение</th>
+      <tr> 
+        <tr>
+          <td align="center">Мастер и Маргарита</td>
+          <td align="center">Булгаков</td>
+          <td align="center">1928</td>
+          <td align="center"><img src="img/book_1.jpg"/></td>
+        </tr>
+        <tr>
+          <td align="center">Евгений Онегин</td>
+          <td align="center">Александр Пушкин</td>
+          <td align="center">1928</td>
+          <td align="center"><img src="img/book_2.jpg"/></td>
+        </tr>
+        <tr>
+          <td align="center">Герой нашего времени</td>
+          <td align="center">М.Ю.Лермонтов</td>
+          <td align="center">1928</td>
+          <td align="center"><img src="img/book_3.jpg"/></td>
+        </tr>
+        <tr>
+          <td align="center">Анна Каренина</td>
+          <td align="center">Лев Толстой</td>
+          <td align="center">1928</td>
+          <td align="center"><img src="img/book_4.jpg"/></td>
+        </tr>
+        <tr>
+          <td align="center">Преступление и наказание</td>
+          <td align="center">Ф.М.Достоевский</td>
+          <td align="center">1928</td>
+          <td align="center"><img src="img/book_5.jpg"/></td>
+        </tr>
+        <tr>
+          <td align="center">Отцы и дети</td>
+          <td align="center">И.С.Тургенев</td>
+          <td align="center">1928</td>
+          <td align="center"><img src="img/book_6.jpg"/></td>
+        </tr>
+        <tr>
+          <td align="center">Братья Карамазовы</td>
+          <td align="center">Ф. Достоевский</td>
+          <td align="center">1928</td>
+          <td align="center"><img src="img/book_7.jpg"/></td>
+        </tr>
+        <tr>
+          <td align="center">Горе от ума</td>
+          <td align="center">А. Грибоедов</td>
+          <td align="center">1928</td>
+          <td align="center"><img src="img/book_8.jpg"/></td>
+        </tr>
+        <tr>
+          <td align="center">Тихий Дон</td>
+          <td align="center">М. Шолохов</td>
+          <td align="center">1928</td>
+          <td align="center"><img src="img/book_9.jpg"/></td>
+        </tr>
+        <tr>
+          <td align="center">Доктор Живаго</td>
+          <td align="center">Пастернак</td>
+          <td align="center">1928</td>
+          <td align="center"><img src="img/book_10.jpg"/></td>
+        </tr>
+      </tr>
+    </tbody>
+  </table>
+</form><!DOCTYPE html>
+<bottom>
+  <div class="bottom">
+    <div class="bottom_1">
+      © Фамилия И.О., группа, 2023-2024
+       
+    </div>
+    <div class="bottom_2">✉контакты</div>
+  </div>
+</bottom>
